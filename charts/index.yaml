@@ -3,12 +3,12 @@ entries:
   Jenkins:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2021-09-11T12:56:21.190133483Z"
+    created: "2021-09-11T13:16:12.50687012Z"
     description: A Helm chart for Kubernetes
-    digest: 40c3a55455c1a117275381b89060e1d1f5da8e4ad311d0116672ecf708a43f51
+    digest: 2a66f73fb6e44d07654ea92593744387ebdb988015a996b929ef291b06bb0d53
     name: Jenkins
     type: application
     urls:
     - Jenkins-0.1.0.tgz
     version: 0.1.0
-generated: "2021-09-11T12:56:21.187183978Z"
+generated: "2021-09-11T13:16:12.505628981Z"
