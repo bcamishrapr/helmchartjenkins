@@ -1,0 +1,5 @@
+imagename: jenkins/jenkins:lts
+pvc: jenkins-pv-claim
+port:
+  cport: 8080
+  jport: 50000
