@@ -1,12 +1,12 @@
 apiVersion: {{ include "common.capabilities.deployment.apiVersion" . }}
 kind: Deployment
 metadata:
-  name: {{ include "common.names.fullname" . }}
-  namespace: {{ .Release.Namespace | quote }}
-  labels: {{- include "common.labels.standard" . | nindent 4 }}
-    {{- if .Values.commonLabels }}
+  name: {{ include "common.names.fullname" . }} #coming from template as defined in _names.tpl files
+  namespace: {{ .Release.Namespace | quote }} #quote:It is used to quote any string
+  labels: {{- include "common.labels.standard" . | nindent 4 }}  #applying pre-defined labels as mentioned in (charts/common/templates/_labels.tpl)
+    {{- if .Values.commonLabels }}  #in-case of extra labels defined in values.yaml file
     {{- include "common.tplvalues.render" ( dict "value" .Values.commonLabels "context" $ ) | nindent 4 }}
-    {{- end }}
+    {{- end }}  #use tplvalues.render template to fetch values from dictionary and then change it to yaml format
   {{- if .Values.commonAnnotations }}
   annotations: {{- include "common.tplvalues.render" ( dict "value" .Values.commonAnnotations "context" $ ) | nindent 4 }}
   {{- end }}
